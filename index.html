@@ -333,14 +333,14 @@
             <option>Товары</option>
             <option>Работы</option>
             <option>Услуги</option>
-            <option>Консультационные услуги</option>
+          
           </select>
         </div>
         <div class="field">
           <label for="status">Статус</label>
           <select id="status">
             <option>Все статусы</option>
-            <option>Открыт</option>
+            <option>Актуально</option>
             <option>Завершён</option>
             <option>Планируется</option>
           </select>
@@ -359,15 +359,14 @@
     <section class="table-card">
       <div class="table-head">
         <h3>Результаты поиска</h3>
-        <span>Таблица готова для подключения данных</span>
       </div>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>Название закупки</th>
-              <th>Страна</th>
-              <th>Проект</th>
+              
+        
               <th>Организация</th>
               <th>Дата публикации</th>
               <th>Срок подачи</th>
@@ -381,20 +380,33 @@
           </tbody>
         </table>
       </div>
-      <div class="empty-message">
-        В настоящее время данные в таблицу не добавлены. Позже сюда можно
-        подключить базу данных, API или автоматический импорт тендерной информации.
-      </div>
+     
     </section>
   </main>
 
   <footer>
+   <footer class="site-footer">
     <div class="footer-inner">
-      <div><strong>Международный тендерный портал</strong><br><small>© 2026 Все права защищены</small></div>
-      <div class="footer-links">
-        <a href="#">О платформе</a>
-        <a href="#">Контакты</a>
-        <a href="#">Политика конфиденциальности</a>
+
+        <!-- Информация о платформе -->
+        <div class="footer-info">
+            <strong>Международный тендерный портал</strong><br>
+            <small>© 2026 Все права защищены</small>
+        </div>
+
+        <!-- Контактная информация -->
+        <div class="footer-contact">
+            <p>📍 Республика Казахстан, г. Караганда</p>
+            <p>ул. Строителей, 33, офис 701</p>
+            <p>📞 <a href="tel:+77052464479">+7 705 246 44 79</a></p>
+            <p>✉️ <a href="mailto:MTtender@gmail.com">MTtender@gmail.com</a></p>
+        </div>
+
+        <!-- Ссылки -->
+        <div class="footer-links">
+            <a href="#">О платформе</a>
+            <a href="#">Политика конфиденциальности</a>
+        </div>
       </div>
     </div>
   </footer>
