@@ -4,18 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Международный тендерный портал</title>
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #1f2937;
       background: #f5f7fa;
     }
+
+    /* HEADER */
+
     header {
       background: #fff;
       border-bottom: 1px solid #d9dee7;
     }
+
     .topbar {
       max-width: 1280px;
       margin: 0 auto;
@@ -25,11 +33,13 @@
       justify-content: space-between;
       gap: 24px;
     }
+
     .brand {
       display: flex;
       align-items: center;
       gap: 14px;
     }
+
     .logo {
       width: 48px;
       height: 48px;
@@ -41,89 +51,111 @@
       font-weight: bold;
       font-size: 20px;
     }
+
     .brand-text h1 {
       margin: 0;
       font-size: 21px;
       color: #123b5d;
     }
+
     .brand-text p {
       margin: 4px 0 0;
       font-size: 13px;
       color: #64748b;
     }
+
     nav {
       display: flex;
       flex-wrap: wrap;
       gap: 22px;
     }
+
     nav a {
       color: #334155;
       text-decoration: none;
       font-size: 15px;
     }
-    nav a:hover { color: #005a9c; }
+
+    nav a:hover {
+      color: #005a9c;
+    }
+
+    /* HERO */
 
     .hero {
       background: linear-gradient(135deg, #063b63, #0b5f94);
       color: white;
       padding: 54px 28px 62px;
     }
+
     .hero-inner {
       max-width: 1280px;
       margin: 0 auto;
     }
+
     .breadcrumb {
       font-size: 14px;
-      opacity: .82;
+      opacity: 0.82;
       margin-bottom: 22px;
     }
+
     .hero h2 {
       margin: 0 0 14px;
       font-size: clamp(30px, 5vw, 48px);
       font-weight: 700;
     }
+
     .hero p {
       max-width: 760px;
       margin: 0;
       line-height: 1.65;
       font-size: 18px;
-      opacity: .94;
+      opacity: 0.94;
     }
+
+    /* MAIN */
 
     main {
       max-width: 1280px;
       margin: 0 auto;
       padding: 38px 28px 70px;
     }
+
     .section-title {
       margin: 0 0 10px;
       font-size: 28px;
       color: #173b58;
     }
+
     .section-description {
       margin: 0 0 25px;
       color: #64748b;
       line-height: 1.6;
     }
 
+    /* FILTERS */
+
     .filters {
       background: white;
       border: 1px solid #dbe2ea;
       border-radius: 8px;
       padding: 24px;
-      box-shadow: 0 2px 10px rgba(15, 23, 42, .04);
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
       margin-bottom: 28px;
     }
+
     .filters h3 {
       margin: 0 0 20px;
       font-size: 20px;
       color: #173b58;
     }
+
     .filter-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
+
     .field label {
       display: block;
       margin-bottom: 8px;
@@ -131,7 +163,9 @@
       font-weight: 600;
       color: #475569;
     }
-    input, select {
+
+    input,
+    select {
       width: 100%;
       padding: 12px 13px;
       border: 1px solid #cbd5e1;
@@ -140,15 +174,19 @@
       font-size: 15px;
       color: #334155;
     }
-    input:focus, select:focus {
+
+    input:focus,
+    select:focus {
       outline: 2px solid #93c5fd;
       border-color: #2563eb;
     }
+
     .actions {
       display: flex;
       gap: 12px;
       margin-top: 22px;
     }
+
     button {
       border: 0;
       padding: 12px 22px;
@@ -157,54 +195,54 @@
       cursor: pointer;
       font-weight: 600;
     }
+
     .primary {
       background: #0067a8;
       color: white;
     }
-    .primary:hover { background: #00558c; }
+
+    .primary:hover {
+      background: #00558c;
+    }
+
     .secondary {
       background: #e8eef3;
       color: #334155;
     }
+
+    /* TABLE */
 
     .table-card {
       background: white;
       border: 1px solid #dbe2ea;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 10px rgba(15, 23, 42, .04);
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
     }
-    .table-head {
-      padding: 22px 24px;
-      border-bottom: 1px solid #e2e8f0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+
+    .table-wrap {
+      overflow-x: auto;
     }
-    .table-head h3 {
-      margin: 0;
-      font-size: 21px;
-      color: #173b58;
-    }
-    .table-head span {
-      color: #64748b;
-      font-size: 14px;
-    }
-    .table-wrap { overflow-x: auto; }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 950px;
+      table-layout: fixed;
     }
+
+    th,
+    td {
+      width: 25%;
+    }
+
     th {
       text-align: left;
       background: #f1f5f9;
       color: #334155;
       padding: 16px 18px;
       font-size: 14px;
-      white-space: nowrap;
     }
+
     td {
       padding: 20px 18px;
       border-top: 1px solid #e2e8f0;
@@ -212,56 +250,107 @@
       font-size: 15px;
       height: 64px;
     }
-    .empty-message {
-      padding: 28px 24px;
-      color: #64748b;
-      border-top: 1px solid #e2e8f0;
-      line-height: 1.6;
-    }
+
+    /* FOOTER */
 
     footer {
       background: #123b5d;
       color: #dbeafe;
       padding: 34px 28px;
     }
+
     .footer-inner {
       max-width: 1280px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
       gap: 24px;
       flex-wrap: wrap;
     }
-    .footer-inner strong { color: white; }
+
+    .footer-inner strong {
+      color: white;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .footer-contact a {
+      color: #dbeafe;
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+
     .footer-links {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
     }
+
     .footer-links a {
       color: #dbeafe;
       text-decoration: none;
       font-size: 14px;
     }
 
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* MOBILE */
+
     @media (max-width: 800px) {
-      .topbar { align-items: flex-start; flex-direction: column; }
-      nav { gap: 14px; }
-      .filter-grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 40px; }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      .filter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      table {
+        min-width: 700px;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
+
   <header>
     <div class="topbar">
+
       <div class="brand">
         <div class="logo">МТ</div>
+
         <div class="brand-text">
           <h1>Международный тендерный портал</h1>
           <p>Поиск и мониторинг международных закупок</p>
         </div>
       </div>
+
       <nav>
         <a href="#">Главная</a>
         <a href="#">Тендеры</a>
@@ -270,145 +359,387 @@
         <a href="#">Страны</a>
         <a href="#">О платформе</a>
       </nav>
+
     </div>
   </header>
 
+
+  <!-- HERO -->
+
   <section class="hero">
     <div class="hero-inner">
-      <div class="breadcrumb">Главная / Закупки</div>
-      <h2>Государственные и международные закупки</h2>
+
+      <div class="breadcrumb">
+        Главная / Закупки
+      </div>
+
+      <h2>
+        Государственные и международные закупки
+      </h2>
+
       <p>
         Платформа для поиска, анализа и мониторинга информации о международных
         проектах, закупках и тендерных процедурах.
       </p>
+
     </div>
   </section>
 
+
+  <!-- MAIN -->
+
   <main>
-    <h2 class="section-title">Поиск закупок</h2>
+
+    <h2 class="section-title">
+      Поиск закупок
+    </h2>
+
     <p class="section-description">
       Используйте параметры поиска для фильтрации и организации информации.
     </p>
 
+
+    <!-- FILTERS -->
+
     <section class="filters">
-      <h3>Параметры поиска</h3>
+
+      <h3>
+        Параметры поиска
+      </h3>
+
+
       <div class="filter-grid">
+
+
         <div class="field">
-          <label for="search">Поиск</label>
-          <input id="search" type="text" placeholder="Введите ключевое слово" />
+          <label for="search">
+            Поиск
+          </label>
+
+          <input
+            id="search"
+            type="text"
+            placeholder="Введите ключевое слово"
+          />
         </div>
+
+
         <div class="field">
-          <label for="country">Страна</label>
+          <label for="country">
+            Страна
+          </label>
+
           <select id="country">
             <option>Казахстан</option>
           </select>
         </div>
+
+
         <div class="field">
-          <label for="region">Регион</label>
+
+          <label for="region">
+            Регион
+          </label>
+
           <select id="region">
-            <option>Все регионы</option>
-            <option value="100000000">Область Абай</option>
-<option value="110000000">Акмолинская область</option>
-<option value="150000000">Актюбинская область</option>
-<option value="190000000">Алматинская область</option>
-<option value="230000000">Атырауская область</option>
-<option value="630000000">Восточно-Казахстанская область</option>
-<option value="310000000">Жамбылская область</option>
-<option value="270000000">Западно-Казахстанская область</option>
-<option value="330000000">Область Жетісу</option>
-<option value="350000000">Карагандинская область</option>
-<option value="390000000">Костанайская область</option>
-<option value="430000000">Кызылординская область</option>
-<option value="470000000">Мангистауская область</option>
-<option value="550000000">Павлодарская область</option>
-<option value="590000000">Северо-Казахстанская область</option>
-<option value="610000000">Туркестанская область</option>
-<option value="620000000">Область Ұлытау</option>
+
+            <option value="">
+              Все регионы
+            </option>
+
+            <option value="100000000">
+              Область Абай
+            </option>
+
+            <option value="110000000">
+              Акмолинская область
+            </option>
+
+            <option value="150000000">
+              Актюбинская область
+            </option>
+
+            <option value="190000000">
+              Алматинская область
+            </option>
+
+            <option value="230000000">
+              Атырауская область
+            </option>
+
+            <option value="630000000">
+              Восточно-Казахстанская область
+            </option>
+
+            <option value="310000000">
+              Жамбылская область
+            </option>
+
+            <option value="270000000">
+              Западно-Казахстанская область
+            </option>
+
+            <option value="330000000">
+              Область Жетісу
+            </option>
+
+            <option value="350000000">
+              Карагандинская область
+            </option>
+
+            <option value="390000000">
+              Костанайская область
+            </option>
+
+            <option value="430000000">
+              Кызылординская область
+            </option>
+
+            <option value="470000000">
+              Мангистауская область
+            </option>
+
+            <option value="550000000">
+              Павлодарская область
+            </option>
+
+            <option value="590000000">
+              Северо-Казахстанская область
+            </option>
+
+            <option value="610000000">
+              Туркестанская область
+            </option>
+
+            <option value="620000000">
+              Область Ұлытау
+            </option>
+
           </select>
+
         </div>
+
+
         <div class="field">
-          <label for="type">Тип закупки</label>
+
+          <label for="type">
+            Тип закупки
+          </label>
+
           <select id="type">
-            <option>Все типы</option>
-            <option>Товары</option>
-            <option>Работы</option>
-            <option>Услуги</option>
-          
+
+            <option>
+              Все типы
+            </option>
+
+            <option>
+              Товары
+            </option>
+
+            <option>
+              Работы
+            </option>
+
+            <option>
+              Услуги
+            </option>
+
           </select>
+
         </div>
+
+
         <div class="field">
-          <label for="status">Статус</label>
+
+          <label for="status">
+            Статус
+          </label>
+
           <select id="status">
-            <option>Все статусы</option>
-            <option>Актуально</option>
-            <option>Завершён</option>
-            <option>Планируется</option>
+
+            <option>
+              Все статусы
+            </option>
+
+            <option>
+              Актуально
+            </option>
+
+            <option>
+              Завершён
+            </option>
+
+            <option>
+              Планируется
+            </option>
+
           </select>
+
         </div>
+
+
         <div class="field">
-          <label for="date">Дата публикации</label>
-          <input id="date" type="date" />
+
+          <label for="date">
+            Дата публикации
+          </label>
+
+          <input
+            id="date"
+            type="date"
+          />
+
         </div>
+
+
       </div>
+
+
       <div class="actions">
-        <button class="primary">Найти</button>
-        <button class="secondary" type="reset">Сбросить фильтры</button>
+
+        <button class="primary">
+          Найти
+        </button>
+
+        <button
+          class="secondary"
+          type="reset"
+        >
+          Сбросить фильтры
+        </button>
+
       </div>
+
     </section>
 
+
+    <!-- TABLE -->
+
     <section class="table-card">
-      <div class="table-head">
-        <h3>Результаты поиска</h3>
-      </div>
+
       <div class="table-wrap">
+
         <table>
+
           <thead>
+
             <tr>
               <th>Название закупки</th>
-              
-        
               <th>Организация</th>
               <th>Дата публикации</th>
               <th>Срок подачи</th>
             </tr>
+
           </thead>
+
+
           <tbody>
-            <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-            <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-            <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-            <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+
+            <tr>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+
+            <tr>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+
+            <tr>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+
+            <tr>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+
           </tbody>
+
         </table>
+
       </div>
-     
+
     </section>
+
   </main>
 
-  <footer>
-   <footer class="site-footer">
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
     <div class="footer-inner">
 
-        <!-- Информация о платформе -->
-        <div class="footer-info">
-            <strong>Международный тендерный портал</strong><br>
-            <small>© 2026 Все права защищены</small>
-        </div>
 
-        <!-- Контактная информация -->
-        <div class="footer-contact">
-            <p>📍 Республика Казахстан, г. Караганда</p>
-            <p>ул. Строителей, 33, офис 701</p>
-            <p>📞 <a href="tel:+77052464479">+7 705 246 44 79</a></p>
-            <p>✉️ <a href="mailto:MTtender@gmail.com">MTtender@gmail.com</a></p>
-        </div>
+      <div class="footer-info">
 
-        <!-- Ссылки -->
-        <div class="footer-links">
-            <a href="#">О платформе</a>
-            <a href="#">Политика конфиденциальности</a>
-        </div>
+        <strong>
+          Международный тендерный портал
+        </strong>
+
+        <br>
+
+        <small>
+          © 2026 Все права защищены
+        </small>
+
       </div>
+
+
+      <div class="footer-contact">
+
+        <p>
+          📍 Республика Казахстан, г. Караганда
+        </p>
+
+        <p>
+          ул. Строителей, 33, офис 701
+        </p>
+
+        <p>
+          📞
+          <a href="tel:+77052464479">
+            +7 705 246 44 79
+          </a>
+        </p>
+
+        <p>
+          ✉️
+          <a href="mailto:MTtender@gmail.com">
+            MTtender@gmail.com
+          </a>
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#">
+          О платформе
+        </a>
+
+        <a href="#">
+          Политика конфиденциальности
+        </a>
+
+      </div>
+
+
     </div>
+
   </footer>
+
+
 </body>
 </html>
